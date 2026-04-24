@@ -5,7 +5,6 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pagos/pagos/pom.xml" />
-        <option value="$PROJECT_DIR$/pedido/pedido/pom.xml" />
         <option value="$PROJECT_DIR$/carrito/carrito/pom.xml" />
         <option value="$PROJECT_DIR$/reporte/reporte/pom.xml" />
         <option value="$PROJECT_DIR$/resenia/resenia/pom.xml" />
@@ -15,6 +14,7 @@
         <option value="$PROJECT_DIR$/sucursal/sucursal/pom.xml" />
         <option value="$PROJECT_DIR$/inventario/inventario/pom.xml" />
         <option value="$PROJECT_DIR$/notificaciones/notificaciones/pom.xml" />
+        <option value="$PROJECT_DIR$/pedido/pedido/pom.xml" />
       </list>
     </option>
   </component>
