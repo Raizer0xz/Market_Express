@@ -3,7 +3,13 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Annotation profile for pedido" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seguridad" />
+      </profile>
+      <profile name="Annotation profile for usuario" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -35,6 +41,7 @@
       <module name="producto" options="-parameters" />
       <module name="reporte" options="-parameters" />
       <module name="resenia" options="-parameters" />
+      <module name="seguridad" options="-parameters" />
       <module name="sucursal" options="-parameters" />
       <module name="usuario" options="-parameters" />
     </option>
