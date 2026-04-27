@@ -1,0 +1,37 @@
+package com.example.producto.model;
+
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jdk.jfr.Category;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table (name = "Producto")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+
+
+
+
+public class Producto {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToMany
+    @JoinColumn(name = "Categoria_id", nullable = false)
+    private Categoria categoria;
+
+
+    @NotBlank
+    private String nombre;
+    private String descripcion;
+    private String imagenUrl;
+    private String unidadMedida;
+    private Boolean activo = true;
+
+}

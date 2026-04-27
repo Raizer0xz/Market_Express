@@ -1,0 +1,5 @@
+-- TODO: Agregar aqui el CREATE TABLE para el microservicio resenia
+-- Ejemplo:
+-- CREATE TABLE IF NOT EXISTS resenia (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY
+-- );

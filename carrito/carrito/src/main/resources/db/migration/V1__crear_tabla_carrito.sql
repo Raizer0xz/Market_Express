@@ -1,0 +1,5 @@
+-- TODO: Agregar aqui el CREATE TABLE para el microservicio carrito
+-- Ejemplo:
+-- CREATE TABLE IF NOT EXISTS carrito (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY
+-- );

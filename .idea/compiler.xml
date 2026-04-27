@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seguridad" />
+      </profile>
+      <profile name="Annotation profile for producto" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
+        </processorPath>
+        <module name="delivery" />
+        <module name="resenia" />
+        <module name="notificaciones" />
+        <module name="sucursal" />
+        <module name="pedido" />
+        <module name="usuario" />
+        <module name="producto" />
+        <module name="carrito" />
+        <module name="pagos" />
+        <module name="inventario" />
+        <module name="reporte" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="carrito" options="-parameters" />
+      <module name="delivery" options="-parameters" />
+      <module name="inventario" options="-parameters" />
+      <module name="notificaciones" options="-parameters" />
+      <module name="pagos" options="-parameters" />
+      <module name="pedido" options="-parameters" />
+      <module name="producto" options="-parameters" />
+      <module name="reporte" options="-parameters" />
+      <module name="resenia" options="-parameters" />
+      <module name="seguridad" options="-parameters" />
+      <module name="sucursal" options="-parameters" />
+      <module name="usuario" options="-parameters" />
+    </option>
+  </component>
+</project>

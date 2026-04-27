@@ -1,0 +1,5 @@
+-- TODO: Agregar aqui el CREATE TABLE para el microservicio delivery
+-- Ejemplo:
+-- CREATE TABLE IF NOT EXISTS delivery (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY
+-- );

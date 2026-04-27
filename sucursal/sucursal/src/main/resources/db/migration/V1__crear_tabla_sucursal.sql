@@ -1,0 +1,5 @@
+-- TODO: Agregar aqui el CREATE TABLE para el microservicio sucursal
+-- Ejemplo:
+-- CREATE TABLE IF NOT EXISTS sucursal (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY
+-- );

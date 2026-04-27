@@ -1,0 +1,5 @@
+-- TODO: Agregar aqui el CREATE TABLE para el microservicio inventario
+-- Ejemplo:
+-- CREATE TABLE IF NOT EXISTS inventario (
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY
+-- );
