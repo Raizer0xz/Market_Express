@@ -21,7 +21,7 @@ public class PrecioProducto {
     private Long id;
 
 
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name = "producto_id", nullable = false)
     private Producto producto;
 
