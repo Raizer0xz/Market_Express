@@ -22,8 +22,8 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToMany
-    @JoinColumn(name = "Categoria_id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;
 
 

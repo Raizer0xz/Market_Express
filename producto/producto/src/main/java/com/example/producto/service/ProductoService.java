@@ -23,7 +23,7 @@ public class ProductoService {
     @Autowired
     private WebClient.Builder webClientBuilder;
 
-    public List<Producto> ListarProductos(){
+    public List<Producto> listarProductos(){
         log.info("Listado de todos los productos activos");
 
         return productoRepository.findByActivoTrue();
@@ -33,8 +33,22 @@ public class ProductoService {
         return productoRepository.findById(id).orElseThrow(()
                 -> new RuntimeException("Producto no encontrado:" + id));
 
+    }
+    public List<Producto> listarPorCategoria(Long categoriaId) {
+        return productoRepository.findByCategoriaIdAndActivoTrue(categoriaId);
+    }
 
+    public Producto crearProducto(Producto producto){
+        categoriaRepository.findById(producto.getCategoria().getId()).orElseThrow(() -> new RuntimeException("Categoria no encontrada"));
+        log.info("Creando producto: {}", producto.getNombre());
+        return productoRepository.save(producto);
 
+    }
+    public void eliminarProducto(Long id){
+        Producto p = obternerPorId(id);
+        p.setActivo(false);
+        productoRepository.save(p);
+        log.info("Producto {} desactivado", id);
     }
 
 
