@@ -26,7 +26,7 @@ public class PrecioProducto {
     private Producto producto;
 
     @Column(name = "sucursal_id", nullable = false)
-    private Long sucursal;
+    private Long sucursalId;
 
     @Positive
     @Column(nullable = false)

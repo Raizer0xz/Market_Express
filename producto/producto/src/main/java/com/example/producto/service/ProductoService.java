@@ -3,6 +3,7 @@ package com.example.producto.service;
 
 import com.example.producto.model.Producto;
 import com.example.producto.repository.CategoriaRepository;
+import com.example.producto.repository.PrecioProductoRepository;
 import com.example.producto.repository.ProductoRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,9 @@ import java.util.List;
 @Service
 @Slf4j
 public class ProductoService {
+    @Autowired
+    private PrecioProductoRepository precioProductoRepository;
+
     @Autowired
     private ProductoRepository productoRepository;
 
@@ -44,11 +48,13 @@ public class ProductoService {
         return productoRepository.save(producto);
 
     }
-    public void eliminarProducto(Long id){
+    public void eliminarProducto(Long id) {
         Producto p = obternerPorId(id);
-        p.setActivo(false);
-        productoRepository.save(p);
-        log.info("Producto {} desactivado", id);
+        // Primero eliminar los precios asociados
+        precioProductoRepository.deleteAll(precioProductoRepository.findByProductoId(id));
+        // Luego eliminar el producto físicamente
+        productoRepository.delete(p);
+        log.info("Producto {} eliminado", id);
     }
 
 
